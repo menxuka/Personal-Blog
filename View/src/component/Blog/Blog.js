@@ -61,9 +61,9 @@ const Blog = ({ blog, path }) => {
 
                 <div className="blogInformation mb-4 flex justify-between text-base">
                     <span className="blogAuthor">Author:
-                        <Link to={`/?user=${blog.username}`}>
-                            <b>{blog.username}</b>
-                        </Link>
+
+                        <b>{blog.username}</b>
+
                     </span>
                     <span className="blogDate">{
                         new Date(blog.createdAt).toDateString()}</span>

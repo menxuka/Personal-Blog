@@ -13,6 +13,8 @@ import Settings from './component/Pages/Settings/Settings';
 import Login from './component/Pages/Login/Login';
 import { useContext } from 'react';
 import { Context } from './context/Context';
+import About from './component/Pages/About/About';
+import Contact from './component/Pages/Contact/Contact';
 
 function App() {
   const { user } = useContext(Context);
@@ -27,6 +29,14 @@ function App() {
 
           <Route path="/login">
             {user ? <Home /> : <Login />}
+          </Route>
+
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route path="/contact">
+            <Contact />
           </Route>
 
           <Route path="/write">

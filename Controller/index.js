@@ -31,6 +31,8 @@ const storage = multer.diskStorage({
     }
 });
 
+
+
 const upload = multer({ storage: storage });
 app.post('/controller/upload', upload.single('file'), (req, res) => {
     res.status(200).json('Image Uploaded')
